@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#1a5c2e">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Camping Abordable">
+    <meta name="description" content="Haltes-VR gratuites et camping abordable au Québec">
+    <title>Camping Abordable</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="icons/icon-192.png">
+    <link rel="icon" href="icons/icon-192.png" type="image/png">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- SPLASH / LOADING -->
+    <div id="splash">
+        <div class="splash-icon">
+            <svg viewBox="0 0 100 100"><rect width="100" height="100" rx="20" fill="#1a5c2e"/><path d="M50 15 L78 38 L78 82 L62 82 L62 60 L38 60 L38 82 L22 82 L22 38 Z" fill="white" stroke="#d4a017" stroke-width="2"/><circle cx="50" cy="44" r="10" fill="#d4a017"/><path d="M38 82 L50 68 L62 82" fill="#d4a017"/><text x="50" y="94" text-anchor="middle" font-family="sans-serif" font-weight="bold" font-size="8" fill="white">CA</text></svg>
+        </div>
+        <div class="splash-loader">
+            <div class="splash-bar"></div>
+        </div>
+    </div>
+
+    <!-- APP HEADER -->
+    <header id="appHeader">
+        <button id="menuBtn" class="header-btn" aria-label="Menu">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="20" y2="18"/></svg>
+        </button>
+        <div class="header-logo">
+            <svg width="28" height="28" viewBox="0 0 100 100"><rect width="100" height="100" rx="20" fill="#1a5c2e"/><path d="M50 15 L78 38 L78 82 L62 82 L62 60 L38 60 L38 82 L22 82 L22 38 Z" fill="white" stroke="#d4a017" stroke-width="2"/><circle cx="50" cy="44" r="10" fill="#d4a017"/><path d="M38 82 L50 68 L62 82" fill="#d4a017"/></svg>
+            <span>Camping Abordable</span>
+        </div>
+        <button id="refreshBtn" class="header-btn" aria-label="Rafraîchir">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg>
+        </button>
+    </header>
+
+    <!-- SIDE MENU -->
+    <nav id="sideMenu" class="side-menu">
+        <div class="menu-header">
+            <strong>Navigation</strong>
+            <button id="closeMenu" class="header-btn">&times;</button>
+        </div>
+        <ul class="menu-list">
+            <li><a href="#" data-page="home"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg> Accueil</a></li>
+            <li><a href="#" data-page="carte"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Carte Haltes-VR</a></li>
+            <li><a href="#" data-page="ressources"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg> Ressources</a></li>
+            <li><a href="#" data-page="guide"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M16 16s-1.5-2-4-2-4 2-4 2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg> Guide SÉPAQ</a></li>
+            <li><a href="#" data-page="blogue"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg> Blogue</a></li>
+            <li><a href="#" data-page="calculatrice"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><line x1="8" y1="10" x2="8" y2="10"/><line x1="12" y1="10" x2="12" y2="10"/><line x1="16" y1="10" x2="16" y2="10"/><line x1="8" y1="14" x2="8" y2="14"/><line x1="12" y1="14" x2="12" y2="14"/><line x1="16" y1="14" x2="16" y2="14"/><line x1="8" y1="18" x2="8" y2="18"/><line x1="12" y1="18" x2="12" y2="18"/><line x1="16" y1="18" x2="16" y2="18"/></svg> Essence</a></li>
+            <li><a href="#" data-page="inscription"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14"/><path d="M5 12h14"/></svg> Inscrire Halte-VR</a></li>
+            <li><a href="#" data-page="membres"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg> Membres</a></li>
+            <li><a href="#" data-page="contact"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> Contact</a></li>
+            <li><a href="#" data-page="apropos"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg> À propos</a></li>
+        </ul>
+    </nav>
+    <div id="menuOverlay" class="menu-overlay"></div>
+
+    <!-- MAIN CONTENT -->
+    <main id="mainContent">
+        <!-- Page content loaded dynamically -->
+    </main>
+
+    <!-- BOTTOM TAB BAR -->
+    <nav id="tabBar" class="tab-bar">
+        <button class="tab-btn active" data-page="home">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            <span>Accueil</span>
+        </button>
+        <button class="tab-btn" data-page="carte">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>Carte</span>
+        </button>
+        <button class="tab-btn" data-page="blogue">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            <span>Blogue</span>
+        </button>
+        <button class="tab-btn" data-page="ressources">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+            <span>Ressources</span>
+        </button>
+        <button class="tab-btn" data-page="contact">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            <span>Contact</span>
+        </button>
+    </nav>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
